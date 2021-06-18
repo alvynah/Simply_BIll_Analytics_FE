@@ -29,7 +29,6 @@ import { ActivationComponent } from './components/activation/activation.componen
     InsightsComponent,
     routingComponents,
     ActivationComponent,
-    
   ],
   imports: [
     BrowserModule,
