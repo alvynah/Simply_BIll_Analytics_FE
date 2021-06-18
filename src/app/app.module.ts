@@ -29,13 +29,14 @@ import { ActivationComponent } from './components/activation/activation.componen
     InsightsComponent,
     routingComponents,
     ActivationComponent,
-    HttpClientModule,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
