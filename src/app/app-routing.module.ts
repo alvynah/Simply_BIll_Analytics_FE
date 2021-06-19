@@ -24,7 +24,7 @@ const routes: Routes = [
         { path: 'paybill', component: PaybillComponent},
         { path: 'till', component: TillnumberComponent},
       ]
-    },
+      },
   { path:'password', component: PasswordComponent},
   { path:'adminregister', component: AdminRegistrationComponent},
   { path:'adminlogin', component: AdminLoginComponent}

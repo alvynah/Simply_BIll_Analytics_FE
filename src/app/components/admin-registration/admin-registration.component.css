@@ -17,7 +17,7 @@ a,a:hover{
 }
 .myform-area .form-area{
   position: relative;
-  background:#da1c2f;
+  background:#22b90e;
   width: 100%;
   height:620px;
   overflow: hidden;
@@ -175,7 +175,7 @@ a,a:hover{
     width: 100%;
     height: 50px;
     font-size: 17px;
-    background: #da1c2f;
+    background:#22b90e;
     border: none;
     border-radius: 50px;
     color: #fff;
@@ -185,5 +185,5 @@ a,a:hover{
     transition: all .5s;
 }
 .myform-area .form-area .myform-button .myform-btn:hover{
-    background: #07315B;
+  background: #075b50;
 }
