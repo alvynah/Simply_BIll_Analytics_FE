@@ -14,6 +14,9 @@ import { CategoryDetailsComponent } from './components/category-details/category
 import { PaymentComponent } from './components/payment/payment.component';
 import { InsightsComponent } from './components/insights/insights.component';
 import { ActivationComponent } from './components/activation/activation.component';
+import { PaybillComponent } from './components/payment/paybill/paybill.component';
+import { TillnumberComponent } from './components/payment/tillnumber/tillnumber.component';
+import { MobiletransferComponent } from './components/payment/mobiletransfer/mobiletransfer.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import { ActivationComponent } from './components/activation/activation.componen
     InsightsComponent,
     routingComponents,
     ActivationComponent,
+    PaybillComponent,
+    TillnumberComponent,
+    MobiletransferComponent,
   ],
   imports: [
     BrowserModule,
