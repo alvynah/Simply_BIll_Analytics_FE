@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -16,7 +17,10 @@ import { InsightsComponent } from './components/insights/insights.component';
 import { ActivationComponent } from './components/activation/activation.component';
 import { PaybillComponent } from './components/payment/paybill/paybill.component';
 import { TillnumberComponent } from './components/payment/tillnumber/tillnumber.component';
-import { MobiletransferComponent } from './components/payment/mobiletransfer/mobiletransfer.component';
+import { SendmoneyComponent } from './components/payment/sendmoney/sendmoney.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -34,7 +38,12 @@ import { MobiletransferComponent } from './components/payment/mobiletransfer/mob
     ActivationComponent,
     PaybillComponent,
     TillnumberComponent,
-    MobiletransferComponent,
+    SendmoneyComponent,
+    
+    
+    
+    
+    
   ],
   imports: [
     BrowserModule,
