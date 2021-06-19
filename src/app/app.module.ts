@@ -18,6 +18,9 @@ import { ActivationComponent } from './components/activation/activation.componen
 import { PaybillComponent } from './components/payment/paybill/paybill.component';
 import { TillnumberComponent } from './components/payment/tillnumber/tillnumber.component';
 import { SendmoneyComponent } from './components/payment/sendmoney/sendmoney.component';
+import { PasswordComponent } from './components/password/password.component';
+import { AdminRegistrationComponent } from './components/admin-registration/admin-registration.component';
+import { AdminLoginComponent } from './components/admin-login/admin-login.component';
 
 
 
@@ -39,6 +42,9 @@ import { SendmoneyComponent } from './components/payment/sendmoney/sendmoney.com
     PaybillComponent,
     TillnumberComponent,
     SendmoneyComponent,
+    PasswordComponent,
+    AdminRegistrationComponent,
+    AdminLoginComponent,
     
     
     
