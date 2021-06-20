@@ -21,6 +21,9 @@ import { SendmoneyComponent } from './components/payment/sendmoney/sendmoney.com
 import { PasswordComponent } from './components/password/password.component';
 import { AdminRegistrationComponent } from './components/admin-registration/admin-registration.component';
 import { AdminLoginComponent } from './components/admin-login/admin-login.component';
+import { AdminVerificationComponent } from './components/admin-verification/admin-verification.component';
+import { AdminVerificationdetailsComponent } from './components/admin-verificationdetails/admin-verificationdetails.component';
+
 
 
 
@@ -45,6 +48,9 @@ import { AdminLoginComponent } from './components/admin-login/admin-login.compon
     PasswordComponent,
     AdminRegistrationComponent,
     AdminLoginComponent,
+    AdminVerificationComponent,
+    AdminVerificationdetailsComponent,
+    
     
     
     

@@ -1,3 +1,4 @@
+import { AdminVerificationComponent } from './components/admin-verification/admin-verification.component';
 import { AdminRegistrationComponent } from './components/admin-registration/admin-registration.component';
 import { AdminLoginComponent } from './components/admin-login/admin-login.component';
 import { SendmoneyComponent } from './components/payment/sendmoney/sendmoney.component';
@@ -12,6 +13,7 @@ import { LoginComponent } from './components/login/login.component'
 import { PaymentComponent } from './components/payment/payment.component'
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminVerificationdetailsComponent } from './components/admin-verificationdetails/admin-verificationdetails.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent},
@@ -27,7 +29,9 @@ const routes: Routes = [
       },
   { path:'password', component: PasswordComponent},
   { path:'adminregister', component: AdminRegistrationComponent},
-  { path:'adminlogin', component: AdminLoginComponent}
+  { path:'adminlogin', component: AdminLoginComponent},
+  { path:'adminverify', component: AdminVerificationComponent}, 
+  { path: 'userdetails', component: AdminVerificationdetailsComponent},
 ];
 
 @NgModule({
@@ -35,4 +39,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [ RegistrationComponent, LoginComponent , ActivationComponent, LandingComponent, PaymentComponent , PaybillComponent , TillnumberComponent, SendmoneyComponent, PasswordComponent , AdminLoginComponent, AdminRegistrationComponent]
+export const routingComponents = [ RegistrationComponent, LoginComponent , ActivationComponent, LandingComponent, PaymentComponent , PaybillComponent , TillnumberComponent, SendmoneyComponent, PasswordComponent , AdminLoginComponent, AdminRegistrationComponent , AdminVerificationComponent, 
+AdminVerificationComponent]
