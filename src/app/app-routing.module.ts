@@ -14,11 +14,13 @@ import { PaymentComponent } from './components/payment/payment.component'
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminVerificationdetailsComponent } from './components/admin-verificationdetails/admin-verificationdetails.component';
+import { CategoryDetailsComponent } from './components/category-details/category-details.component';
+
 
 const routes: Routes = [
   { path: '', component: LoginComponent},
   { path: 'registration', component: RegistrationComponent},
-  { path: 'activation', component: ActivationComponent},
+  { path: 'activation/:id', component: ActivationComponent},
   { path: 'home', component: LandingComponent},
   { path: 'payment', component: PaymentComponent, 
       children: [
@@ -32,6 +34,7 @@ const routes: Routes = [
   { path:'adminlogin', component: AdminLoginComponent},
   { path:'adminverify', component: AdminVerificationComponent}, 
   { path: 'userdetails', component: AdminVerificationdetailsComponent},
+  { path: 'category-details', component:CategoryDetailsComponent}
 ];
 
 @NgModule({
