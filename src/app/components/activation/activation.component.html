@@ -12,11 +12,6 @@
                         </div>
                         <div class="form-input">
                             <h2>Activation Form</h2>
-                            <!-- on success message -->
-                            <div *ngIf="success"  class="alert alert-success alert-dismissible my-2" role="alert">
-                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                                 <small>{{success}} </small>
-                            </div>
                             <!-- on invalid form -->
                             <div *ngIf="submitted && !activationForm.valid"  class="alert alert-danger alert-dismissible my-2" role="alert">
                                 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -77,6 +72,7 @@
                                     Please upload a Personal Passport image!
                               </small>  
                                
+
                                 <div class="form-group">
                                     <label>Driving License Image</label><br><br>
                                     <input 
