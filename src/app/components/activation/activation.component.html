@@ -31,6 +31,7 @@
 
                             <!-- form -->
                             <form *ngIf='success_submit' [formGroup]="activationForm" (ngSubmit)='onsubmit()' enctype="multipart/form-data">  
+
                                 <div class="form-group">
                                     <input 
                                       type="number"  
@@ -77,6 +78,7 @@
                                     Please upload a Personal Passport image!
                               </small>  
                                
+
                                 <div class="form-group">
                                     <label>Driving License Image</label><br><br>
                                     <input 
@@ -102,6 +104,7 @@
                                 
                                 <div class="form-group">
                                     <!-- <input 
+
                                       type="text"  
                                       id="residence" 
                                       formControlName="residence" 
@@ -111,6 +114,7 @@
                                         <option [ngValue]="null" disabled>Choose County of Residence</option>
                                            <option *ngFor="let county of counties" [ngValue]="county">{{county}}</option>
                                     </select>
+
                                 </div>
                                 <small class="help-block" *ngIf="!activationForm.get('residence').valid && activationForm.get('residence').touched">
                                    
@@ -126,6 +130,7 @@
                                     type="submit">Submit</button>
                                 </div> 
                              
+
                             </form>
                         </div>
                     </div>

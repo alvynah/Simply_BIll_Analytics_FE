@@ -25,6 +25,7 @@ export class ActivationComponent implements OnInit {
   loading:boolean = false
 
 
+
   constructor(private http:HttpClient, private router:Router, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -67,6 +68,7 @@ export class ActivationComponent implements OnInit {
        this.activationForm.get('driving_license_picture').setValue(file);
     }
   }
+
 
 
   onsubmit(){
@@ -168,6 +170,7 @@ export class ActivationComponent implements OnInit {
     'Nyamira',
     'Nairobi City'
    ]
+
 
 
 }
