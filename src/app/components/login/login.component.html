@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Animated Login Form</title>
-	
-	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Animated Login Form</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
+
 <body>
-   
+
     <section class="myform-area">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    
+
                     <div class="form-area login-form">
                         <div class="form-content">
                             <h2>Login</h2>
@@ -27,23 +29,23 @@
                         <div class="form-input">
                             <h2>Login Form</h2>
 
-                            <form [formGroup]="form"  (submit)="submit()"  >
+                            <form [formGroup]="form" (submit)="submit()">
                                 <div class="form-group">
-                                    <input formControlName="phone_number" type="number"  id="" name="PhoneNumber"  required>
+                                    <input formControlName="phone_number" type="number" id="PhoneNumber" name="PhoneNumber" required>
                                     <label>Phone Number</label>
                                 </div>
                                 <div class="form-group">
-                                    <input formControlName="password" type="password" id="" name="Password" required>
+                                    <input formControlName="password" type="password" id="Password" name="Password" required>
                                     <label>password</label>
                                 </div>
                                 <div class="myform-button">
-                                    <button class="myform-btn" type="submit"  >Login</button>
+                                    <button class="myform-btn" type="submit">Login</button>
 
                                 </div>
                                 <div class="form-content">
-                                    <a routerLink="/registration"><label for="">Sign Up Here!</label></a>   
+                                    <a routerLink="/registration"><label for="">Sign Up Here!</label></a>
                                 </div>
-                                
+
                             </form>
                         </div>
                     </div>
@@ -54,4 +56,5 @@
 
 
 </body>
+
 </html>
