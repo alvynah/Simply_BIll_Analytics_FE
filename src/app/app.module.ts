@@ -23,6 +23,7 @@ import { AdminRegistrationComponent } from './components/admin-registration/admi
 import { AdminLoginComponent } from './components/admin-login/admin-login.component';
 import { AdminVerificationComponent } from './components/admin-verification/admin-verification.component';
 import { AdminVerificationdetailsComponent } from './components/admin-verificationdetails/admin-verificationdetails.component';
+import { AdminnavbarComponent } from './components/adminnavbar/adminnavbar.component';
 
 
 
@@ -50,6 +51,7 @@ import { AdminVerificationdetailsComponent } from './components/admin-verificati
     AdminLoginComponent,
     AdminVerificationComponent,
     AdminVerificationdetailsComponent,
+    AdminnavbarComponent,
     
     
     
