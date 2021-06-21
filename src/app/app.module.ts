@@ -14,6 +14,8 @@ import { CategoryDetailsComponent } from './components/category-details/category
 import { PaymentComponent } from './components/payment/payment.component';
 import { InsightsComponent } from './components/insights/insights.component';
 import { ActivationComponent } from './components/activation/activation.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './shared/material/material.module';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { ActivationComponent } from './components/activation/activation.componen
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
