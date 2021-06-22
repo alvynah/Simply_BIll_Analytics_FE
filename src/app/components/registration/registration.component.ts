@@ -11,7 +11,11 @@ import { Router } from '@angular/router';
 })
 export class RegistrationComponent implements OnInit {
 
-  form! : FormGroup ;
+  form:any = FormGroup ;
+
+  errors:any
+  submitted:boolean=false;
+  loading:boolean = false;
 
   // form =new FormGroup({
   //   first_name:new FormControl('', [Validators.required]),
@@ -32,15 +36,23 @@ export class RegistrationComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.form = this.formBuilder.group({
-      first_name: '',
-      last_name : '',
-      email:'',
-      phone_number:'',
-      password:'',
-      username:'',
-    }); 
-  }
+    // this.form = this.formBuilder.group({
+    //   first_name: '',
+    //   last_name : '',
+    //   email:'',
+    //   phone_number:'',
+    //   password:'',
+    //   username:'',
+    // }); 
+    this.form =new FormGroup({
+      first_name:new FormControl('', [Validators.required]),
+      last_name:new FormControl('', [Validators.required]),
+      username:new FormControl('', [Validators.required]),
+      phone_number:new FormControl('', [Validators.required]),
+      email:new FormControl('', [Validators.required]),
+      password:new FormControl('', [Validators.required]),
+      });
+    }
  
   submit(): void{
     this.http.post('http://localhost:8000/api/user/register/',this.form.getRawValue()).subscribe(response =>{console.log(response)
@@ -48,5 +60,25 @@ export class RegistrationComponent implements OnInit {
       this.router.navigateByUrl('/login');
     })
   }
+
+  // submit(): void{
+  //   this.submitted=true
+  //   if(this.form.valid){
+  //     this.loading=true
+  //     this.http.post('http://localhost:8000/api/user/register/',this.form.getRawValue())
+  //       .subscribe(
+  //             response =>{console.log(response)
+  //             alert("You have been Successfully Registered")
+  //             this.router.navigate(['/activation',this.form.get('phone_number').value]);
+  //             },
+  //             error =>
+  //               {
+  //                   console.log(error.error)
+  //                   this.errors= error.error
+  //                   this.loading=false
+  //                   this.submitted=false
+  //               })
+  //           }
+  //         }
 
 }

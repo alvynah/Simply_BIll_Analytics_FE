@@ -14,15 +14,90 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Raleway:wght@200&family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Raleway:wght@200;400&family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:600,900" rel="stylesheet">
     <title>Payment</title>
 </head>
 <body>
+    <app-adminnavbar></app-adminnavbar>
     
-    <div class="header_fixed">
-        <app-adminnavbar></app-adminnavbar>
-        <br>
-        <br>
-        <br>
+    <div class="container" >
+
+        <section class="py-5 text-center container">
+            <div class="row py-lg-5">
+              <div class="col-lg-6 col-md-8 mx-auto">     
+                <p>
+                  <a href="#" class="btn btn-success my-2">APPROVE</a>
+                  <a href="#" class="btn btn-danger my-2">REJECT</a>
+                </p>
+                <p class="lead">
+                    User ID:  User Name: KRA PIN Number: County Of Residence:      
+                </p>
+              </div>
+            </div>
+        </section>
+
+
+        <div class="gallery-image">
+            <div class="img-box">
+                <img src="https://picsum.photos/350/250/?image=232" alt="" />
+                <div class="transparent-box">
+                    <div class="caption">
+                    <p>Personal Photo</p>
+                    <p class="opacity-low">Username</p>
+                    </div>
+                </div>
+            </div>
+            <div class="img-box">
+                <img src="https://picsum.photos/350/250?image=444" alt="" />
+                <div class="transparent-box">
+                    <div class="caption">
+                    <p>National ID</p>
+                    <p class="opacity-low">National ID Number</p>
+                    </div>
+                </div> 
+            </div>
+            
+            <div class="img-box">
+                <img src="https://picsum.photos/350/250/?image=431" alt="" />
+                <div class="transparent-box">
+                    <div class="caption">
+                    <p>KRA PIN</p>
+                    <p class="opacity-low">User KRA Number</p>
+                    </div>
+                </div>
+            </div>
+            <div class="img-box">
+            <img src="https://picsum.photos/350/250?image=474" alt="" />
+            <div class="transparent-box">
+                <div class="caption">
+                <p>Driving License</p>
+                <p class="opacity-low">Driving License Number</p>
+                </div>
+            </div> 
+            </div>
+            
+            
+        </div>
+    
+    </div>
+    
+      
+        
+        
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
         <table>
             <thead>
                 <tr>
@@ -35,50 +110,7 @@
                    <th>County Of Residence</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>ID</td>
-                    <td><img [src]="image1" alt="ID Photo"></td>
-                    <td><img [src]="image1" alt="Personal Photo"></td>
-                    <td>KRA PIN</td>
-                    <td><img [src]="image1" alt="Drivers License"></td>
-                    <td>Kiambu County</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>ID</td>
-                    <td><img [src]="image1" alt="ID Photo"></td>
-                    <td><img [src]="image1" alt="Personal Photo"></td>
-                    <td>KRA PIN</td>
-                    <td><img [src]="image1" alt="Drivers License"></td>
-                    <td>Kiambu County</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>ID</td>
-                    <td><img [src]="image1" alt="ID Photo"></td>
-                    <td><img [src]="image1" alt="Personal Photo"></td>
-                    <td>KRA PIN</td>
-                    <td><img [src]="image1" alt="Drivers License"></td>
-                    <td>Kiambu County</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>ID</td>
-                    <td><img [src]="image1" alt="ID Photo"></td>
-                    <td><img [src]="image1" alt="Personal Photo"></td>
-                    <td>KRA PIN</td>
-                    <td><img [src]="image1" alt="Drivers License"></td>
-                    <td>Kiambu County</td>
-                </tr>
-               
-                
-                
-            </tbody>
-        </table>
-    </div>
-
+        </table>    
 
 
 </body>

@@ -39,7 +39,7 @@
                         </div>
                         <div class="form-input">
                             <h2>Admin Registration</h2>
-                            <form >
+                            <form [formGroup]="form" (submit)="submit()">
                                 <div class="form-group">
                                     <input formControlName="first_name"  type="text"  id="first_name" name="name" required>
                                     <label>First Name</label>
@@ -66,7 +66,7 @@
                                 </div>
                                 
                                 <div class="myform-button">
-                                    <button class="myform-btn" type="submit" routerLink="/adminlogin"  >Register</button>
+                                    <button class="myform-btn" type="submit"  >Register</button>
                                 </div>
                                 
                                 
