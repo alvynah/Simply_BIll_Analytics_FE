@@ -1,1 +1,35 @@
+<<<<<<< HEAD
 <h3>Images</h3>
+=======
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand text-white" routerLink="/home" >
+        <h2>
+          Digital 360
+        </h2>
+        
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse  justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav" >
+          <li class="nav-item">
+              <a routerLink="/" class="nav-link">
+                My Account
+            </a>
+          </li>
+          <li class="nav-item ml-2" >
+            <a   *ngIf="authenticated" class="nav-link" (click)="logout()">
+              <i class="fa fa-sign-out-alt mr-1" aria-hidden="true"></i>
+                  Logout
+           </a>
+           <a   *ngIf="!authenticated"  class="nav-link" routerLink='/'>
+                Login   
+            </a>
+          </li>
+      </ul>
+    </div>
+  </nav>
+>>>>>>> 6f7f786542decaf7e26f21cbb24ab9a5e9e83b4b
