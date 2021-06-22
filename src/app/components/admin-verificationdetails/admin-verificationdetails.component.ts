@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Emitters } from 'src/app/emitters/emitters';
 import { ProfileService } from 'src/app/services/profile.service';
+
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -114,6 +115,7 @@ export class AdminVerificationdetailsComponent implements OnInit {
                         }
                       )
             }
+
 
 
 
