@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-admin-registration',
@@ -19,9 +20,9 @@ export class AdminRegistrationComponent implements OnInit {
   loading:boolean = false
 
   constructor(
-    private http: HttpClient,
-    private router: Router,
-    
+        private http: HttpClient,
+        private router: Router,
+        private toastr:ToastrService
     ){ 
   }
 
@@ -54,7 +55,7 @@ export class AdminRegistrationComponent implements OnInit {
                       
                       this.loading=false
 
-                      alert("You have been Successfully Registered")
+                      this.toastr.success('You have been Successfully Registered. Login.', 'Registration successful')
 
 
                       this.router.navigate(['/adminlogin']);
@@ -69,9 +70,15 @@ export class AdminRegistrationComponent implements OnInit {
                           this.loading=false
 
                           this.submitted=false
+
+                          for(let [key, value] of Object.entries(this.errors)){
+                            this.toastr.error(value[0], 'Registration unsuccessful') 
+                          }
                      }
                   
                   )
+    }else{
+      this.toastr.error('Invalid form, please provide all the required details.', 'Registration unsuccessful')
     }
         
   }
