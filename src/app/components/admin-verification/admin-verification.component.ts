@@ -1,6 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Emitters } from 'src/app/emitters/emitters';
 import { UserService } from 'src/app/services/user.service';
+
 
 @Component({
   selector: 'app-admin-verification',
@@ -36,6 +38,7 @@ export class AdminVerificationComponent implements OnInit {
             .subscribe(
                  res => console.log(res)
             )
+
   }
 
 }
