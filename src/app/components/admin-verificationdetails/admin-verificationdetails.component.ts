@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Emitters } from 'src/app/emitters/emitters';
 import { ProfileService } from 'src/app/services/profile.service';
+
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -40,6 +41,7 @@ export class AdminVerificationdetailsComponent implements OnInit {
                  }
         );
         //fetch doc
+
         this.route.params.subscribe(
               params=>{
                      this.userService
@@ -57,6 +59,7 @@ export class AdminVerificationdetailsComponent implements OnInit {
 
                                     this.loading=false
                                 }
+
                                 
                      )
               }

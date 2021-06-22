@@ -4,6 +4,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
+
 @Component({
   selector: 'app-admin-registration',
   templateUrl: './admin-registration.component.html',
@@ -23,6 +24,7 @@ export class AdminRegistrationComponent implements OnInit {
         private http: HttpClient,
         private router: Router,
         private toastr:ToastrService
+
     ){ 
   }
 
@@ -58,6 +60,7 @@ export class AdminRegistrationComponent implements OnInit {
                       this.toastr.success('You have been Successfully Registered. Login.', 'Registration successful')
 
 
+
                       this.router.navigate(['/adminlogin']);
 
                      }
@@ -79,6 +82,7 @@ export class AdminRegistrationComponent implements OnInit {
                   )
     }else{
       this.toastr.error('Invalid form, please provide all the required details.', 'Registration unsuccessful')
+
     }
         
   }
