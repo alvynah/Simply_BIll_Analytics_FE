@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Emitters } from 'src/app/emitters/emitters';
 import { ProfileService } from 'src/app/services/profile.service';
@@ -37,6 +38,8 @@ export class AdminVerificationComponent implements OnInit {
               .subscribe(
                     res=>{
                         this.users = res
+                        console.log(res);
+                        
                     },
                     error=>{
                       console.log(error.error)

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Emitters } from 'src/app/emitters/emitters';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
   selector: 'app-navbar',
@@ -16,18 +17,20 @@ export class NavbarComponent implements OnInit {
   constructor(
                 private http:HttpClient, 
                 private router:Router,
-                private toastr:ToastrService
+                private toastr:ToastrService,
+                private authenticationService:AuthenticationService
               ) { }
 
   ngOnInit():void{
-        Emitters.authEmitter.subscribe(
-                       (res:boolean) => 
-                               {
-                                 this.authenticated=res
-                                // console.log(res);
+        // Emitters.authEmitter.subscribe(
+        //                (res:boolean) => 
+        //                        {
+        //                          this.authenticated=res
+        //                         // console.log(res);
                                 
-                               }              
-        )    
+        //                        }              
+        // )    
+        this.authenticationService.currentUser.subscribe(x => this.authenticated = x);
   }
 
 
@@ -38,18 +41,40 @@ export class NavbarComponent implements OnInit {
 
 
         if(cancel){
-            this.http
-            .post('http://localhost:8000/logout/',{},{withCredentials:true})
+          this.authenticationService
+            .logout()
             .subscribe(
-              response =>{
+                  response =>{
+                    
+                    this.authenticated = false;
+
+                    this.toastr.success('Successful Logout')
+
+                    // this.router.navigateByUrl('/userlogin');
+                    location.reload();
+
+                  },
+                  error=>{
+                       console.log(error);
+                       this.toastr.error('Unsuccessful Logout')
+                  }
+              
+              )
+
+            // this.http
+            // .post('http://localhost:8000/logout/',{},{withCredentials:true})
+            // .subscribe(
+            //   response =>{
                 
-                this.authenticated = false;
+            //     this.authenticated = false;
 
-                this.toastr.success('Successful Logout')
+            //     this.toastr.success('Successful Logout')
 
-                this.router.navigateByUrl('/');
+            //     this.router.navigateByUrl('/');
 
-              })
+            //   })
+
+
         }
 
       
