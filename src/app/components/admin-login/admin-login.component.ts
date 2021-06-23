@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AdminAuthenticationService } from 'src/app/services/admin-authentication.service';
 
+
 @Component({
   selector: 'app-admin-login',
   templateUrl: './admin-login.component.html',
@@ -33,6 +34,7 @@ export class AdminLoginComponent implements OnInit {
               this.router.navigate(['/adminverify']);
        }
          }
+
         
         
         ngOnInit(): void {
@@ -43,6 +45,7 @@ export class AdminLoginComponent implements OnInit {
 
              // get return url from route parameters or default to '/adminlogin'
              this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/adminlogin';
+
         }
         
         submit(): void{
@@ -68,6 +71,7 @@ export class AdminLoginComponent implements OnInit {
                           console.log('error', error)
                         }
                       );
+
           }else{
             this.toastr.error('Invalid form, please provide all the required details.','Login Unsuccessful!');
           }

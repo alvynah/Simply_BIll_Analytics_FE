@@ -31,6 +31,7 @@ import { JwtInterceptor } from './services/jwt-interceptor.service';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,6 +55,7 @@ import { ErrorPageComponent } from './components/error-page/error-page.component
     AdminVerificationdetailsComponent,
     AdminnavbarComponent,
     ErrorPageComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -72,6 +74,7 @@ import { ErrorPageComponent } from './components/error-page/error-page.component
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
+
   ],
   bootstrap: [AppComponent]
 })

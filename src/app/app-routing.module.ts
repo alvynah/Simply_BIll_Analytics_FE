@@ -40,6 +40,7 @@ const routes: Routes = [
   { path: 'category-details', component:CategoryDetailsComponent},
   { path:'page-not-found', component:ErrorPageComponent},
   { path:'**', redirectTo:'/page-not-found', pathMatch:'full'}
+
 ];
 
 @NgModule({

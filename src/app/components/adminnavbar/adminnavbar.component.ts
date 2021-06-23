@@ -5,6 +5,7 @@ import { ToastrService } from 'ngx-toastr';
 import { Emitters } from 'src/app/emitters/emitters';
 import { AdminAuthenticationService } from 'src/app/services/admin-authentication.service';
 
+
 @Component({
   selector: 'app-adminnavbar',
   templateUrl:'./adminnavbar.component.html',
@@ -18,12 +19,14 @@ export class AdminnavbarComponent implements OnInit {
                     private toastr:ToastrService,
                     private router:Router,
                     private currentAdmin:AdminAuthenticationService
+
                     ) { }
 
 
         ngOnInit():void{
           this.currentAdmin.currentAdmin.subscribe( x => this.authenticated=x )
           
+
       }
 
 
@@ -57,6 +60,7 @@ export class AdminnavbarComponent implements OnInit {
                     
                     
                   )
+
           }
 
         
