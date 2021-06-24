@@ -40,7 +40,7 @@ export class AdminVerificationComponent implements OnInit {
                         this.users = res
                         console.log(res);
                         
-                    },
+       },
                     error=>{
                       console.log(error.error)
                     }

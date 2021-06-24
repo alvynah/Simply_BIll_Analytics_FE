@@ -53,7 +53,9 @@ import { ErrorPageComponent } from './components/error-page/error-page.component
     AdminVerificationComponent,
     AdminVerificationdetailsComponent,
     AdminnavbarComponent,
+
     ErrorPageComponent,
+
   ],
   imports: [
     BrowserModule,

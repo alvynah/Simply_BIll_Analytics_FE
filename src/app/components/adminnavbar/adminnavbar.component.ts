@@ -18,12 +18,14 @@ export class AdminnavbarComponent implements OnInit {
                     private toastr:ToastrService,
                     private router:Router,
                     private currentAdmin:AdminAuthenticationService
+
                     ) { }
 
 
         ngOnInit():void{
           this.currentAdmin.currentAdmin.subscribe( x => this.authenticated=x )
           
+
       }
 
 
@@ -57,6 +59,7 @@ export class AdminnavbarComponent implements OnInit {
                     
                     
                   )
+
           }
 
         
