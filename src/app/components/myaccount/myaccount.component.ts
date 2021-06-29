@@ -4,6 +4,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { ProfileService } from 'src/app/services/profile.service';
 import { TransactionService } from 'src/app/services/transaction.service';
+
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -30,6 +31,7 @@ export class MyaccountComponent implements OnInit {
                 private toastr:ToastrService,
                 private transactService:TransactionService
               ) { }
+
 
   ngOnInit(): void {
             //fetches current user
@@ -68,6 +70,7 @@ export class MyaccountComponent implements OnInit {
                                               console.log(error);
                                             }
                                   )
+
                 },
                 error => {
                   console.log('error', error)
@@ -82,9 +85,7 @@ export class MyaccountComponent implements OnInit {
             
             })
 
-            
-            
-       
+
 
 
   }
@@ -95,6 +96,7 @@ export class MyaccountComponent implements OnInit {
 
     if(this.form.valid){
       this.http.patch(`${environment.apiUrl}/api/deposit/${this.user.phone_number}/`,this.form.getRawValue())
+
             .subscribe(
               res => {
                 this.toastr.success('Successful deposit.')
@@ -110,6 +112,7 @@ export class MyaccountComponent implements OnInit {
               this.toastr.error('Please enter the amount you want to deposit', 'Unsuccessful Deposit')
     }
        
+
 
   }
 

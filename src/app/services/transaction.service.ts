@@ -18,4 +18,5 @@ export class TransactionService {
   getTransactions(phone_number){
          return this.http.get(`${environment.apiUrl}/api/get/user-transactions/${phone_number}`)
   }
+
 }

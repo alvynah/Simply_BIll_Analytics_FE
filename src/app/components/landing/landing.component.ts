@@ -21,6 +21,7 @@ export class LandingComponent implements OnInit {
               
               ) { }
 
+
   ngOnInit(): void {
             //fetches current user
             this.current_user
@@ -52,7 +53,7 @@ export class LandingComponent implements OnInit {
               }
             );
 
-            
+
 
         
   }
