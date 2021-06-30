@@ -167,7 +167,6 @@ a:hover {
     background-color: #42378f;
     background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
     background-size: 200%;
-
     color: #fff;
     text-transform: uppercase;
     margin-right: 25%;
@@ -196,7 +195,6 @@ a:hover {
 
 .btn:hover,
 .btn1:hover {
-
     background-position: right;
 }
 
@@ -239,6 +237,5 @@ form {
     padding: 20px;
     border-radius: 6px;
     box-shadow: inset 0px 0 25px 0 #42378f, inset 0 0 15px 0px #f53844, inset 0 0 5px 0px #fff;
-
     margin-bottom: 3%;
 }
