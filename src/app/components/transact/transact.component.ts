@@ -79,49 +79,39 @@ export class TransactComponent implements OnInit {
   }
 
 
-  submit(){
-    this.submitted=true  //form submitted
-
-    this.loading=true    //form loadng
-    
-        if(this.form.valid){
-                  // return
-                  this.http
-                        .post(`${environment.apiUrl}/api/maketransaction/${this.user.phone_number}/`,this.form.getRawValue())  
-                        .subscribe( 
-                            response =>{  
-
-                                this.loading=false
-
-                                this.toastr.success('Your transaction was successful.', 'Transaction successful')
-   
-                                this.form.reset()
-
-
-                                this.submitted=false
-
-                                this.success_submit=true
-
-                                this.router.navigateByUrl('/my-account')
-                              },
-                              
-                              error => 
-                              {
-                                console.log(error);
-                                
-                                // this.server_errors= true
-                              
-                                this.loading=false
-                                
-                                this.toastr.warning(error.error, 'Transaction unsuccessful!')
-                              }
-                            
-                        )
-        }else{
-              this.loading=false
-
-              this.toastr.error('Invalid form, please provide all the required details.', 'Uploading unsuccessful')
-        }
+  submit() {
+    let confirmed = confirm("Do you really want to proceed with transaction?");
+    if (confirmed) {
+      this.submitted = true  //form submitted
+      this.loading = true    //form loadng
+      if (this.form.valid) {
+        // return
+        this.http
+          .post(`${environment.apiUrl}/api/maketransaction/${this.user.phone_number}/`, this.form.getRawValue())
+          .subscribe(
+            response => {
+              this.loading = false
+              this.toastr.success('Your transaction was successful.', 'Transaction successful')
+              this.form.reset()
+              this.submitted = false
+              this.success_submit = true
+              this.router.navigateByUrl('/my-account')
+            },
+            error => {
+              console.log(error);
+              // this.server_errors= true
+              this.loading = false
+              this.toastr.warning(error.error, 'Transaction unsuccessful!')
+            }
+          )
+      } else {
+        this.loading = false
+        this.toastr.error('Invalid form, please provide all the required details.', 'Uploading unsuccessful')
+      }
+    }
+    else{
+      // location.reload()
+    }
   }
 
   
