@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-admin-registration',
@@ -49,7 +50,7 @@ export class AdminRegistrationComponent implements OnInit {
 
 
       this.http.
-                post('http://localhost:8000/api/admin/register/',this.form.getRawValue())
+                post(`${environment.apiUrl}/api/admin/register/`,this.form.getRawValue())
                 .subscribe(
                      response =>{console.log(response)
                       
