@@ -25,45 +25,6 @@
                     <i class="fas fa-user"></i>
                 </div>
                 <div class="div">
-                    <input class="input" formControlName="last_name" type="text" id="last_name" name="name" placeholder="Last Name" required>
-                </div>
-
-            </div>
-            <small class="help-block" *ngIf="!form.get('last_name').valid && form.get('last_name').touched">
-            
-                Please enter last name!
-            </small>
-            <div class="input-div one">
-                <div class="i">
-                    <i class="fas fa-user"></i>
-                </div>
-                <div class="div">
-                    <input class="input" formControlName="username" type="text" id="username" name="username" placeholder="Username" required>
-                </div>
-
-            </div>
-            <small class="help-block" *ngIf="!form.get('username').valid && form.get('username').touched">
-            
-                Please enter username!
-            </small>
-            <div class="input-div one">
-                <div class="i">
-                    <i class="fas fa-user"></i>
-                </div>
-                <div class="div">
-                    <input class="input" formControlName="email" type="email" id="email" name="email" placeholder="Email" required>
-                </div>
-
-            </div>
-            <small class="help-block" *ngIf="!form.get('email').valid && form.get('email').touched">
-            
-                Please enter an email!
-            </small>
-            <div class="input-div one">
-                <div class="i">
-                    <i class="fas fa-user"></i>
-                </div>
-                <div class="div">
                     <input class="input" formControlName="phone_number" type="tel" id="number" name="name" maxlength="10" placeholder="Phone Number" required>
                 </div>
 
@@ -86,6 +47,7 @@
                 Please enter password!
             </small>
             <div *ngIf='loading' class="my-3">
+
                 <mat-progress-bar mode="indeterminate" color="accent"></mat-progress-bar>
             </div>
             <div class="myform-button">
