@@ -3,6 +3,7 @@ import { FormGroup, ReactiveFormsModule  , Validators , FormControl} from '@angu
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { environment } from 'src/environments/environment';
 
 
 @Component({
@@ -55,7 +56,7 @@ export class RegistrationComponent implements OnInit {
 
 
             this.http.
-                      post('http://localhost:8000/api/user/register/',this.form.getRawValue())
+                      post(`${environment.apiUrl}/api/user/register/`,this.form.getRawValue())
                       .subscribe(
                           response =>{
                             console.log(response)

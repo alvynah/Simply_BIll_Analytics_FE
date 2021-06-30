@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import {  ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-activation',
@@ -92,7 +93,7 @@ export class ActivationComponent implements OnInit {
     
         if(this.activationForm.valid){
                   this.http
-                        .post(`http://localhost:8000/api/activation-post/${this.phone_number}/`,formData)  
+                        .post(`${environment.apiUrl}/api/activation-post/${this.phone_number}/`,formData)  
                         .subscribe( 
                             response =>{  
 
