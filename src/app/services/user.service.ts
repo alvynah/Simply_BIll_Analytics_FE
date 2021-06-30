@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User } from '../interfaces/user.model';
 import { map } from 'rxjs/operators'
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,7 @@ export class UserService {
 
   getUnApprovedUsers(){
    return this.http
-        .get('http://localhost:8000/api/get-invalidcustomers/')
+        .get(`${environment.apiUrl}/api/get-invalidcustomers/`)
         .pipe( 
           map(   // operator
                 (responseData) =>{
@@ -42,25 +43,25 @@ export class UserService {
 
    getUserDocuments(id:any){
     return this.http
-               .get(`http://localhost:8000/api/user/activation-documents/${id}/`)
+               .get(`${environment.apiUrl}/api/user/activation-documents/${id}/`)
    }
 
 
    approveDocuments(phone_number:any){
         return this.http
-                .patch(`http://localhost:8000/api/activate-user/${phone_number}/`,{})
+                .patch(`${environment.apiUrl}/api/activate-user/${phone_number}/`,{})
    }
 
 
    notifyUploadDocuments(phone_number:any){
         return this.http
-                .post(`http://localhost:8000/api/user/notify_email/${phone_number}/`,{})
+                .post(`${environment.apiUrl}/api/user/notify_email/${phone_number}/`,{})
    }
 
 
    declineDocs(phone_number:any){
             return this.http
-                    .post(`http://localhost:8000/api/user/notifyreupload_email/${phone_number}/`,{})
+                    .post(`${environment.apiUrl}/api/user/notifyreupload_email/${phone_number}/`,{})
    }
 
 

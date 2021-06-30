@@ -80,10 +80,16 @@ export class TransactComponent implements OnInit {
 
 
   submit(){
-    this.submitted=true  //form submitted
-
-    this.loading=true    //form loadng
     
+
+    let confirmed=confirm("Do you really want to proceed with transaction?");
+    
+
+    if(confirmed){
+      this.submitted=true  //form submitted
+
+     this.loading=true    //form loadng
+
         if(this.form.valid){
                   // return
                   this.http
@@ -122,6 +128,9 @@ export class TransactComponent implements OnInit {
 
               this.toastr.error('Invalid form, please provide all the required details.', 'Uploading unsuccessful')
         }
+    }
+
+
   }
 
   
